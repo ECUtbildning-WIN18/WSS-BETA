@@ -8,10 +8,6 @@ namespace WSS
         static void Main(string[] args)
         {
 
-            
-
-            MenuMessages.MenuMessagesStart();
-
         }
 
     }
