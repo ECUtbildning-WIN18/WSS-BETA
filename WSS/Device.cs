@@ -6,6 +6,15 @@ namespace WSS
 {
     class Device
     {
+        public Device()
+        {
+            
+        }
+
+        public Device(Prisoner owner)
+        {
+            Owner = owner;
+        }
         public int BatteryPower { get; set; } = 100;
 
         public bool MateInRange { get; set; } = false;
