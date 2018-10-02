@@ -17,12 +17,6 @@ namespace WSS
             AddAllPrisoners.AllPrisoners();
             CellInfrastructure.AddAllCells();
             MenuMessages.MenuMessagesStart();
-
-            Console.WriteLine("testar");
         }
-
-        
-        
-
     }
 }
