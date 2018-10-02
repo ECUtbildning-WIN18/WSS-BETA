@@ -45,8 +45,7 @@ namespace WSS.Domain
             Console.Clear();
             Console.WriteLine("# Infrastructure\n");
             Console.WriteLine("1 List Blocks");
-            Console.WriteLine("2 Add Block");
-            Console.WriteLine("3 Back to main menu\n");
+            Console.WriteLine("2 Back to main menu\n");
 
             char choice = Console.ReadKey().KeyChar;
 
@@ -56,10 +55,6 @@ namespace WSS.Domain
             }
             else if (choice == '2')
             {
-                BlocksAdd();
-            }
-            else if (choice == '3')
-            {
                 MenuMessagesStart();
             }
             else
@@ -67,7 +62,6 @@ namespace WSS.Domain
                 Console.WriteLine("Somthing get wrong try again!");
                 InfrastructureMenu();
             }
-
             Console.ReadKey();
         }
 
@@ -123,9 +117,7 @@ namespace WSS.Domain
             if (choice == '1')
             {
                 Console.Clear();
-                Console.WriteLine("Not yet ready!");
-                Console.ReadKey();
-                Prisoners();
+                AddPrisoner.AddInmate();
                 
             }
             else if (choice == '2')

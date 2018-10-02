@@ -13,7 +13,7 @@ namespace WSS.Domain
             Console.WriteLine();
             Console.WriteLine("Press key to continue...");
             Console.ReadKey();
-            MenuMessages.InfrastructureMenu();
+            MenuMessages.Prisoners();
         }
 
         static void PrisonerList()
