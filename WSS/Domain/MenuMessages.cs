@@ -6,7 +6,6 @@ using System.Threading;
 namespace WSS.Domain
 {
     class MenuMessages
-
     {
         public static void MenuMessagesStart()
         {
@@ -157,7 +156,6 @@ namespace WSS.Domain
         {
             Console.Clear();
             Console.WriteLine("# Wedlock Security Systems Exit");
-            //code
             Thread.Sleep(2000);
             Environment.Exit(0);
         }

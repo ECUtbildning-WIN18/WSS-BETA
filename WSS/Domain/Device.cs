@@ -13,6 +13,7 @@ namespace WSS
         {
             Owner = owner;
         }
+
         public int BatteryPower { get; set; } = 100;
 
         public bool MateInRange { get; set; } = false;
@@ -25,6 +26,5 @@ namespace WSS
         {
            //prisoner.IsAlive = false;
         }
-
     }
 }

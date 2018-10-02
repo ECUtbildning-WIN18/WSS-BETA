@@ -13,16 +13,16 @@ namespace WSS.Domain
             Console.WriteLine();
             Console.WriteLine("Press key to continue...");
             Console.ReadKey();
-            
             MenuMessages.InfrastructureMenu();
         }
 
         static void PrisonerList()
         {
             Console.Clear();
+
             foreach (var prisoner in Program.PrisonerList)
             {
-                Console.WriteLine($"Name: {prisoner.Value.Name}, Prisoner Id: {prisoner.Key}");
+                Console.WriteLine($"Name: {prisoner.Value.Name}\t Prisoner Id: {prisoner.Key}");
             }
         }
     }

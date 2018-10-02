@@ -20,28 +20,28 @@ namespace WSS.Domain
             foreach (var cell in Program.CellsList)
             {
                 if (cell.Block.Contains("A"))
-                    Console.Write($"{cell.PrisonerSlot} {cell.Prisoner.Name}   ");
+                    Console.Write($"{cell.CellId}: {cell.Prisoner.Name}\t");
             }
             Console.WriteLine();
 
             foreach (var cell in Program.CellsList)
             {
                 if (cell.Block.Contains("B"))
-                    Console.Write($"{cell.PrisonerSlot} {cell.Prisoner.Name}   ");
+                    Console.Write($"{cell.CellId}: {cell.Prisoner.Name}\t");
             }
             Console.WriteLine();
 
             foreach (var cell in Program.CellsList)
             {
                 if (cell.Block.Contains("C"))
-                    Console.Write($"{cell.PrisonerSlot} {cell.Prisoner.Name}   ");
+                    Console.Write($"{cell.CellId}: {cell.Prisoner.Name}\t");
             }
             Console.WriteLine();
 
             foreach (var cell in Program.CellsList)
             {
                 if (cell.Block.Contains("D"))
-                    Console.Write($"{cell.PrisonerSlot} {cell.Prisoner.Name}   ");
+                    Console.Write($"{cell.CellId}: {cell.Prisoner.Name}\t");
             }
         }
     }
