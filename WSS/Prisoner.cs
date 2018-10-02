@@ -6,18 +6,14 @@ namespace WSS
 {
     class Prisoner
     {
-        public string SocialSecurityNumber { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public DateTime BirthDate { get; private set; }
+        public string PrisonerId { get; private set; }
+        public string Name { get; private set; }
         public bool IsAlive { get; private set; } = true;
 
-        public Prisoner(string socialSecurityNumber, string firstName, string lastName, DateTime birthDate)
+        public Prisoner(string prisonerId, string name)
         {
-            SocialSecurityNumber = socialSecurityNumber;
-            FirstName = firstName;
-            LastName = lastName;
-            BirthDate = birthDate;
+            PrisonerId = prisonerId;
+            Name = name;
         }
     }
 }

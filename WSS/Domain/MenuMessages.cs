@@ -10,26 +10,69 @@ namespace WSS.Domain
     {
         public static void MenuMessagesStart()
         {
-
             Console.Clear();
             Console.WriteLine("# Wedlock Security Systems #\n");
             Console.WriteLine("1 Infrastructure");
             Console.WriteLine("2 Prisoners");
             Console.WriteLine("3 Wedlock Devices");
             Console.WriteLine("4 Exit\n\n");
+
+            char choice = Console.ReadKey().KeyChar;
+
+            if (choice == '1')
+            {
+                InfrastructureMenu();
+            }else if (choice == '2')
+            {
+                Prisoners();
+            }
+            else if (choice == '3')
+            {
+                WedlockDevices();
+            }
+            else if (choice == '4')
+            {
+                WssExit();
+            }
+            else
+            {
+                Console.WriteLine("Somthing get wrong try again!");
+                MenuMessagesStart();
+            }
+
+
+            Console.ReadKey();
         }
 
         public static void InfrastructureMenu()
         {
-
-
             Console.Clear();
             Console.WriteLine("# Infrastructure\n");
             Console.WriteLine("1 List Blocks");
             Console.WriteLine("2 Add Block");
             Console.WriteLine("3 Back to main menu\n");
 
+            char choice = Console.ReadKey().KeyChar;
 
+            if (choice == '1')
+            {
+                BlockList();
+            }
+            else if (choice == '2')
+            {
+                BlocksAdd();
+            }
+            else if (choice == '3')
+            {
+                MenuMessagesStart();
+            }
+            else
+            {
+                Console.WriteLine("Somthing get wrong try again!");
+                InfrastructureMenu();
+            }
+
+            Console.ReadKey();
         }
 
         public static void BlockList()
@@ -92,8 +135,6 @@ namespace WSS.Domain
 
         }
 
-
-
         public static void WedlockDevices()
         {
             //##//
@@ -108,17 +149,11 @@ namespace WSS.Domain
 
         public static void WssExit()
         {
-            //##//
             Console.Clear();
             Console.WriteLine("# Wedlock Security Systems Exit");
             //code
             Thread.Sleep(2000);
             Environment.Exit(0);
-            //##//
-
-
         }
-
-
     }
 }

@@ -18,14 +18,14 @@ namespace WSS
             prisoner = device.Owner;
         }
 
-        public void AddPrisoner(string socialSecurityNumber, string firstName, string lastName, DateTime birthDate)
+        public void AddPrisoner(string prisonerId, string name)
         {
-            Program.PrisonerList.Add(socialSecurityNumber, new Prisoner(socialSecurityNumber, firstName, lastName, birthDate));
+            Program.PrisonerList.Add(prisonerId, new Prisoner(prisonerId, name));
         }
 
-        public void RemovePrisoner(string socialSecurityNumber)
+        public void RemovePrisoner(string prisonerId)
         {
-            Program.PrisonerList.Remove(socialSecurityNumber);
+            Program.PrisonerList.Remove(prisonerId);
         }
     }
 }

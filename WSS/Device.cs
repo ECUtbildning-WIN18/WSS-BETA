@@ -25,7 +25,7 @@ namespace WSS
 
         public static void BlowUp(Prisoner prisoner)
         {
-            prisoner.IsAlive = false;
+           //prisoner.IsAlive = false;
         }
 
     }

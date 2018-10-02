@@ -12,8 +12,11 @@ namespace WSS
 
         static void Main(string[] args)
         {
-            Console.WriteLine("hello");
+            MenuMessages.MenuMessagesStart();
         }
+
+        
+        
 
     }
 }

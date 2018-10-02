@@ -28,7 +28,7 @@ namespace WSS.Domain
 
             Inmates = new List<Prisoner>(2);
         }
-
+        
         public void InstallToilet()
         {
             Toilet = true;
