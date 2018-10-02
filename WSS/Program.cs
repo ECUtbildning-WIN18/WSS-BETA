@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
 using WSS.Domain;
 
 namespace WSS
@@ -12,6 +14,8 @@ namespace WSS
 
         static void Main(string[] args)
         {
+            AddAllPrisoners.AllPrisoners();
+            CellInfrastructure.AddAllCells();
             MenuMessages.MenuMessagesStart();
         }
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using WSS.Domain;
+﻿using WSS.Domain;
 
 namespace WSS
 {
@@ -10,7 +6,7 @@ namespace WSS
     {
         public static void LinkPrisonerToCell(Prisoner prisoner, PrisonCells cell)
         {
-           cell.Inmates.Add(prisoner);
+           //cell.Inmates.Add(prisoner);
         }
 
         public static void LinkPrisonerToDevice(Prisoner prisoner, Device device)

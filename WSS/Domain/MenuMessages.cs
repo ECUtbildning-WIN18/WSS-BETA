@@ -39,9 +39,6 @@ namespace WSS.Domain
                 Console.WriteLine("Somthing get wrong try again!");
                 MenuMessagesStart();
             }
-
-
-            Console.ReadKey();
         }
 
         public static void InfrastructureMenu()
@@ -56,7 +53,7 @@ namespace WSS.Domain
 
             if (choice == '1')
             {
-                BlockList();
+                CellView.View();
             }
             else if (choice == '2')
             {
@@ -99,40 +96,49 @@ namespace WSS.Domain
                 //code
         }  
                  
-                 public static void BlocksAdd()
-                 {
-                    //##//
-                    Console.Clear();
-                    Console.WriteLine("# Add Block\n");
-                    //code
+        public static void BlocksAdd()
+        {
+        //##//
+        Console.Clear();
+        Console.WriteLine("# Add Block\n");
+        //code
 
 
 
-                    //code
+        //code
                     
-                    Console.Clear();
-                    Console.WriteLine("# Back to main menu");
-                    MenuMessages.MenuMessagesStart(); //Back to main menu
-
-                    //##//
-                 }
-
-
-
+        Console.Clear();
+        Console.WriteLine("# Back to main menu");
+        MenuMessages.MenuMessagesStart();
+        }
 
         public static void Prisoners()
         {
-
-            //##//
             Console.Clear();
             Console.WriteLine("# Prisoners\n");
-            //code
-            
-            //code
-            
+            Console.WriteLine("1 Add Prisoner");
+            Console.WriteLine("2 List Prisoner");
 
-            //##//
+            char choice = Console.ReadKey().KeyChar;
 
+            if (choice == '1')
+            {
+                Console.Clear();
+                Console.WriteLine("Not yet ready!");
+                Console.ReadKey();
+                Prisoners();
+                
+            }
+            else if (choice == '2')
+            {
+                PrisonerView.View();
+            }
+            else
+            {
+                Console.WriteLine("Somthing get wrong try again!");
+                Console.ReadKey();
+                Prisoners();
+            }
         }
 
         public static void WedlockDevices()
