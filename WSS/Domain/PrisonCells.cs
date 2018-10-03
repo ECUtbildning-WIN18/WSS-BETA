@@ -13,10 +13,9 @@ namespace WSS.Domain
         public int BedNumber { get; set; }
         public bool Toilet { get; private set; }
         public bool Shower { get; private set; }
+        public Prisoner Prisoner { get; set; }
 
-        public List<Prisoner> Inmates { get; set; }
-
-        public PrisonCells(string block, string cellNumber, int bedNumber, bool toilet, bool shower)
+        public PrisonCells(string block, string cellNumber, int bedNumber, bool toilet, bool shower, Prisoner prisoner)
         {
             CellId = $"{block}-{cellNumber}";
             PrisonerSlot = $"{block}-{cellNumber}:{bedNumber}";
@@ -25,10 +24,9 @@ namespace WSS.Domain
             BedNumber = bedNumber;
             Toilet = toilet;
             Shower = shower;
-
-            Inmates = new List<Prisoner>(2);
+            Prisoner = prisoner;
         }
-
+        
         public void InstallToilet()
         {
             Toilet = true;

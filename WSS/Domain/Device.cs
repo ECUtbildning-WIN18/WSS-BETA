@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace WSS
 {
@@ -15,6 +13,7 @@ namespace WSS
         {
             Owner = owner;
         }
+
         public int BatteryPower { get; set; } = 100;
 
         public bool MateInRange { get; set; } = false;
@@ -25,8 +24,7 @@ namespace WSS
 
         public static void BlowUp(Prisoner prisoner)
         {
-            prisoner.IsAlive = false;
+           //prisoner.IsAlive = false;
         }
-
     }
 }
