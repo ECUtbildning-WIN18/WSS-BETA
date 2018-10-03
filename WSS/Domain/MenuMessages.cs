@@ -171,7 +171,7 @@ namespace WSS.Domain
                 WedlockAction.ShowDeadPeople();
             }
 
-            else if (choice == '3')
+            else if (choice == '4')
             {
                 MenuMessagesStart();
             }
