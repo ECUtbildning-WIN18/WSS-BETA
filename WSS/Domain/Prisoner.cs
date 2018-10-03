@@ -4,7 +4,8 @@
     {
         public string PrisonerId { get; private set; }
         public string Name { get; private set; }
-        public bool IsAlive { get; private set; } = true;
+        
+        public bool IsAlive { get; internal set; } = true;
 
         public Prisoner(string prisonerId, string name)
         {

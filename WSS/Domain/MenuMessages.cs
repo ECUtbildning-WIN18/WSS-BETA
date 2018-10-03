@@ -10,7 +10,7 @@ namespace WSS.Domain
         public static void MenuMessagesStart()
         {
             Console.Clear();
-            Console.WriteLine("# Wedlock Security Systems #\n");
+            Console.WriteLine("# Wedlock Security Systems #");
             Console.WriteLine("1 Infrastructure");
             Console.WriteLine("2 Prisoners");
             Console.WriteLine("3 Wedlock Devices");
@@ -43,9 +43,9 @@ namespace WSS.Domain
         public static void InfrastructureMenu()
         {
             Console.Clear();
-            Console.WriteLine("# Infrastructure\n");
+            Console.WriteLine("# Infrastructure");
             Console.WriteLine("1 List Blocks");
-            Console.WriteLine("2 Back to main menu\n");
+            Console.WriteLine("2 Back to main menu");
 
             char choice = Console.ReadKey().KeyChar;
 
@@ -111,6 +111,7 @@ namespace WSS.Domain
             Console.WriteLine("# Prisoners\n");
             Console.WriteLine("1 Add Prisoner");
             Console.WriteLine("2 List Prisoner");
+            Console.WriteLine("3 Back to Main Menu");
 
             char choice = Console.ReadKey().KeyChar;
 
@@ -123,6 +124,10 @@ namespace WSS.Domain
             else if (choice == '2')
             {
                 PrisonerView.View();
+            }
+            else if (choice == '3')
+            {
+                MenuMessagesStart();
             }
             else
             {
@@ -137,11 +142,45 @@ namespace WSS.Domain
             //##//
             Console.Clear();
             Console.WriteLine("# Wedlock Devices\n");
-            //code
+            Console.WriteLine("1 Detonate Wedlock device");
+            Console.WriteLine("2 View Wedlock List");
+            Console.WriteLine("3 Show Dead People");
+            Console.WriteLine("4 Back to Main Menu");
+            char choice = Console.ReadKey().KeyChar;
 
-            //code
-            
-            //##//
+            if (choice == '1')
+            {
+
+                Console.WriteLine();
+                Console.WriteLine();
+                
+                foreach (var weblock in Program.Wedlock)
+                {
+                    Console.Write($"[{weblock.Key}] ");
+                }
+                Console.WriteLine();
+                string chosen = Console.ReadLine();
+                WedlockAction.BlowUp(chosen);
+            }
+            else if(choice == '2')
+            {
+                WedlockView.View();
+            }
+            else if (choice == '3')
+            {
+                WedlockAction.ShowDeadPeople();
+            }
+
+            else if (choice == '3')
+            {
+                MenuMessagesStart();
+            }
+            else
+            {
+                Console.WriteLine("Somthing get wrong try again!");
+                Console.ReadKey();
+                WedlockDevices();
+            }
         }
 
         public static void WssExit()
